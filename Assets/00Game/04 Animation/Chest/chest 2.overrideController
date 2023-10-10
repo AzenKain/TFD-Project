@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: chest 2
+  m_Controller: {fileID: 9100000, guid: c5b8006c7ae3af9469f24c314aae5111, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 903f2bcf95a2bec42a9e46822b4d1482, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d90f4e398623d0a449ff70f929dcea70, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ce35b565a57674145874fb257bf110da, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1bbb4eeaabde99a4cb4d13fb95d3e9e8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: bce327efd6a48804b99950b5a3a286dc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: efb3ca089e3a95f44a9f36313a2a68a2, type: 2}
