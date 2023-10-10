@@ -10437,7 +10437,7 @@ MonoBehaviour:
   _selectBorder: {fileID: 6728938976485517821}
   _buyButton: {fileID: 6255175964758705318}
   _imageShop: {fileID: 1413916320790183053}
-  _titleShop: {fileID: 8493356920249212142}
+  _titleShop: {fileID: 278531170422739499}
   _curentGold: {fileID: 8493356920249212142}
 --- !u!1 &6188890686005979417
 GameObject:
@@ -11209,8 +11209,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -302752401, guid: 449cf4a41495a7f42ac590ae2c86a555, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -2056715097, guid: fbc3c06063aa5f841816a7a729ad879f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
