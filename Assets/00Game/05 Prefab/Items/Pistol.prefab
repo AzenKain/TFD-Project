@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49074d0b9243ef842ab8cd206222b3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 15
+  _damage: 30
   _speedAttack: 0
   _timeUnitDelay: 0.5
   _animator: {fileID: 9163154571910672654}

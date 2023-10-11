@@ -31,6 +31,4 @@ public class MaxHpPotionController : MedicineBase
         SoundManager.Instant.PlaySound("glass-bottle-break");
         routineUseEffect = StartCoroutine(useEffect());
     }
-
-
 }

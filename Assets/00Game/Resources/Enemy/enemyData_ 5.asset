@@ -17,7 +17,7 @@ MonoBehaviour:
   _HP: 500
   _speed: 2
   _armor: 30
-  _baseDmg: 70
+  _baseDmg: 60
   _forceKnockBack: 4
   _detectTargetRadius: 8
   _rangeAttack: 3

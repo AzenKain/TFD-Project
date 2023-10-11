@@ -47,6 +47,8 @@ public class MetalBulletController : BulletBase
             return;
         if (collision.gameObject.CompareTag("Weapon"))
             return;
+        if (collision.gameObject.CompareTag("Gold"))
+            return;
         if (collision.gameObject.CompareTag("Obstacle"))
             return;
         if (_tagAvoid != null || _tagAvoid != "")

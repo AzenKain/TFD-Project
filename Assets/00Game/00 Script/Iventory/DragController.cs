@@ -91,6 +91,7 @@ public class DragController : Singleton<DragController>
         }
 
         ItemInventoryBase movingItem = _movingItem.GetComponent<ItemInventoryBase>();
+        RectTransform recMovingItem = _movingItem.GetComponent<RectTransform>();
 
         if (itemInSlot == null)
         {
@@ -108,6 +109,7 @@ public class DragController : Singleton<DragController>
 
             _movingItem.transform.SetParent(_targetSlot);
             _movingItem.transform.localPosition = Vector3.zero;
+            movingItem.UpdateRectTransform(new Vector2(-32, -32));
             return;
         }
 
@@ -131,7 +133,7 @@ public class DragController : Singleton<DragController>
 
         _movingItem.transform.SetParent(_parent);
         _movingItem.transform.localPosition = Vector3.zero;
-
+        movingItem.UpdateRectTransform(new Vector2(-32, -32));
 
     }
 

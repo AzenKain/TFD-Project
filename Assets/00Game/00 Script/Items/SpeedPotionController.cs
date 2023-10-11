@@ -27,7 +27,7 @@ public class SpeedPotionController : MedicineBase
             return;
 
         _tmpTimeUnitDelay = _timeUnitDelay;
-
+        SoundManager.Instant.PlaySound("glass-bottle-break");
         routineUseEffect = StartCoroutine(useEffect());
     }
 
