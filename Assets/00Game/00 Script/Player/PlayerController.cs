@@ -68,7 +68,11 @@ public class PlayerController : MonoBehaviour, IGetHit, IGetKnockBack
     void Update()
     {
         if (GameManager.Instant._gameState != GameState.Play)
+        {
+            this.movement = Vector2.zero;
             return;
+        }
+
         this.getGoldOnMap();
         this.fight();
         this.useItem();

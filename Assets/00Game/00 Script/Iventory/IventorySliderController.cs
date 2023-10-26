@@ -44,12 +44,8 @@ public class IventorySliderController : Singleton<IventorySliderController>
         this._pastSelectObj = index;
         this.addItem(index);
     }
-
-
-    public void addItem(int index)
+    void disableAllItem()
     {
-        Transform parent = this.transform;
-        Transform currentSelect = parent.GetChild(index);
         PlayerController player = GameManager.Instant.player;
         if (player.transform.childCount > 1)
             for (int i = 1; i < player.transform.childCount; i++)
@@ -59,12 +55,20 @@ public class IventorySliderController : Singleton<IventorySliderController>
                 {
                     medicine.setUI(false);
                     continue;
-              
+
                 }
 
 
                 player.transform.GetChild(i).gameObject.SetActive(false);
             }
+    }
+
+    public void addItem(int index)
+    {
+        Transform parent = this.transform;
+        Transform currentSelect = parent.GetChild(index);
+        PlayerController player = GameManager.Instant.player;
+        this.disableAllItem();
 
 
         if (currentSelect.childCount <= 3)
@@ -73,7 +77,6 @@ public class IventorySliderController : Singleton<IventorySliderController>
             this._selectObject = null;
             return;
         }
-
 
         ItemInventoryBase iventory = currentSelect.GetChild(currentSelect.childCount - 1).gameObject.GetComponent<ItemInventoryBase>();
 
@@ -111,7 +114,7 @@ public class IventorySliderController : Singleton<IventorySliderController>
             return;
         if (DataManager.Instant.RemoveItem(_selectObject, num, false))
             return;
-        this.addItem(this._pastSelectObj);
+        this.disableAllItem();
     }
     public void DisableSelectObject()
     {

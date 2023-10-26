@@ -4,17 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class AsyncController : MonoBehaviour
+public class AsyncController : Singleton<AsyncController>
 {
     [Header("Menu Screen")]
     [SerializeField] Sprite _menuBG;
     [SerializeField] Image _BG;
     [SerializeField] GameObject _mainMenu;
+    [SerializeField] OptionController _option;
 
     [Header("Slider")]
     [SerializeField] Sprite _loadingBG;
     [SerializeField] GameObject _loadingScreen;
     [SerializeField] Slider _loadingSlider;
+
+    [Header("Volume")]
+    [SerializeField] AudioSource _loadingAudioSource;
     // Start is called before the first frame update
 
     public void NewGameOption()
@@ -40,6 +44,12 @@ public class AsyncController : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void OpenOption()
+    {
+        this._option.gameObject.SetActive(true);
+        this._option.UpdateDataOption();
+    }
     void LoadingScreen(int index)
     {
         _BG.sprite = _loadingBG;
@@ -64,8 +74,15 @@ public class AsyncController : MonoBehaviour
     {
         this._BG = GetComponentInChildren<Image>();
         this._BG.sprite = _menuBG;
+        this._loadingAudioSource = GetComponent<AudioSource>();
+        this._option.Init();
+        this.updateAudioSource();
     }
 
+    public void updateAudioSource()
+    {
+        this._loadingAudioSource.volume = this._option.getValueVolume().Key;
+    }
     // Update is called once per frame
     void Update()
     {

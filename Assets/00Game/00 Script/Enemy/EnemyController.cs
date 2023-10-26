@@ -80,7 +80,11 @@ public abstract class EnemyController : MonoBehaviour, IGetHit, IGetKnockBack, I
     void Update()
     {
         if (GameManager.Instant._gameState != GameState.Play)
+        {
+            this._movement = Vector2.zero;
             return;
+        }
+
 
         if (DetectPlayer())
         {

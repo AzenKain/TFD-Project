@@ -17,4 +17,5 @@ public static class CONSTANT
     public static string nameDataShopPhamacy = "inventoryDatasPhamacy";
     public static string nameDataShopForge = "inventoryDatasForge";
     public static string nameDataPlayer = "detailPlayer";
+    public static string nameDataVolume = "volume";
 }
