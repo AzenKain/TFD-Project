@@ -18,9 +18,17 @@ public class GameManager : Singleton<GameManager>
     public List<GoldBase> goldPrefab => _goldPrefab;
 
     // Start is called before the first frame update
+    private void Awake()
+    {   
+        InventoryManager.Instant.Init();
+        DataManager.Instant.Init();
+        IventorySliderController.Instant.updateSelectObj(0);
+        DataManager.Instant.setUpDataPlayer();
+    }
     void Start()
     {
         this._gameState = GameState.Play;
+        SoundManager.Instant.Init();
     }
 
     // Update is called once per frame

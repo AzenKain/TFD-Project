@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.Playables;
 
@@ -19,6 +20,8 @@ public class EnemyAnimation : AnimationControllerBase
 
     public override void UpdateAnim(EnemyState enemyState)
     {
+        if (_animator == null) return;
+
         for (int i = 0; i <= (int)EnemyState.Death; i++)
         {
             if ((int)enemyState == i)
@@ -30,6 +33,7 @@ public class EnemyAnimation : AnimationControllerBase
 
     public override void UpdateValidateAmin(string name, float value)
     {
+        if (_animator == null) return;
         _animator.SetFloat(name, value);
     }
 

@@ -26,6 +26,7 @@ public class MinotaurAnimation : AnimationControllerBase
 
     public override void UpdateAnim(BossState BossState)
     {
+        if (_animator == null) return;
         if (BossState == BossState.PreSweep)
             Debug.LogError("trigger");
         for (int i = 0; i <= (int)BossState.Death; i++)
@@ -40,6 +41,7 @@ public class MinotaurAnimation : AnimationControllerBase
 
     public override void UpdateValidateAmin(string name, float value)
     {
+        if (_animator == null) return;
         _animator.SetFloat(name, value);
     }
 

@@ -1,13 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using SimpleJSON;
-using static UnityEditor.Progress;
-using System;
-using Unity.VisualScripting;
-using UnityEngine.Playables;
-using System.Security.Cryptography;
 
 public class DataManager : Singleton<DataManager>
 {
@@ -17,7 +11,7 @@ public class DataManager : Singleton<DataManager>
     [SerializeField] List<ItemDataSO> _generalDataItems = new List<ItemDataSO>();
     public List<ItemDataSO> genaralDataItems => _generalDataItems;
    
-    void Init()
+    public void Init()
     {
         string data= PlayerPrefs.GetString(CONSTANT.nameDataInventorySlider);
        
@@ -68,7 +62,7 @@ public class DataManager : Singleton<DataManager>
 
     }
 
-    void setUpDataPlayer()
+    public void setUpDataPlayer()
     {
         string dataPlayer = PlayerPrefs.GetString(CONSTANT.nameDataPlayer);
 
@@ -85,10 +79,7 @@ public class DataManager : Singleton<DataManager>
     // Start is called before the first frame update
     void Start()
     {
-        InventoryManager.Instant.Init();
-        Init();
-        IventorySliderController.Instant.updateSelectObj(0);
-        setUpDataPlayer();
+
     }
 
 

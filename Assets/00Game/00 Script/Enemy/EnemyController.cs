@@ -15,7 +15,7 @@ public enum EnemyState
 }
 public abstract class EnemyController : MonoBehaviour, IGetHit, IGetKnockBack, IGetStun
 {
-    [SerializeField] protected EnemyState _enemyState;
+    [SerializeField] protected EnemyState _enemyState = EnemyState.Run;
     [SerializeField] protected BossState _bossState;
     [SerializeField] protected EnemyDataSO _enemyData;
     [SerializeField] protected Rigidbody2D _rigi;
@@ -91,6 +91,9 @@ public abstract class EnemyController : MonoBehaviour, IGetHit, IGetKnockBack, I
             _player = null;
         }
         this.MoveToTarger();
+
+        if (_animController == null) return;
+
         this.updateAni();
         this.updateState();
     }

@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Xml.Serialization;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem.iOS;
+using UnityEngine.InputSystem;
 
 public enum PlayerState
 {

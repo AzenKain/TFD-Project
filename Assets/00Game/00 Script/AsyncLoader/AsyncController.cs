@@ -10,8 +10,8 @@ public class AsyncController : Singleton<AsyncController>
     [SerializeField] Sprite _menuBG;
     [SerializeField] Image _BG;
     [SerializeField] GameObject _mainMenu;
-    [SerializeField] OptionController _option;
-
+    [SerializeField] GameObject _option;
+    private OptionController _optionController;
     [Header("Slider")]
     [SerializeField] Sprite _loadingBG;
     [SerializeField] GameObject _loadingScreen;
@@ -47,8 +47,12 @@ public class AsyncController : Singleton<AsyncController>
 
     public void OpenOption()
     {
+        if (this._optionController == null)
+        {
+            this._optionController = this._option.GetComponentInChildren<OptionController>();
+        }
         this._option.gameObject.SetActive(true);
-        this._option.UpdateDataOption();
+        this._optionController.UpdateDataOption();
     }
     void LoadingScreen(int index)
     {
@@ -70,18 +74,25 @@ public class AsyncController : Singleton<AsyncController>
         }
 
     }
+    private void Awake()
+    {
+
+    }
     void Start()
     {
         this._BG = GetComponentInChildren<Image>();
         this._BG.sprite = _menuBG;
-        this._loadingAudioSource = GetComponent<AudioSource>();
-        this._option.Init();
+        this._loadingAudioSource = GetComponentInChildren<AudioSource>();
+        this._optionController = this._option.GetComponent<OptionController>();
+        this._optionController.Init();
+        
+        this._option.gameObject.SetActive(false);
         this.updateAudioSource();
     }
 
     public void updateAudioSource()
     {
-        this._loadingAudioSource.volume = this._option.getValueVolume().Key;
+        this._loadingAudioSource.volume = this._optionController.getValueVolume().Key;
     }
     // Update is called once per frame
     void Update()

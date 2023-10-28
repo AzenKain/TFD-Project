@@ -17,8 +17,13 @@ public class SoundManager : Singleton<SoundManager>
     List<AudioClip> SoundFiles = new List<AudioClip>();
 
     void Start(){
+
+    }
+    public void Init()
+    {
         Object[] file = Resources.LoadAll("Sound", typeof(AudioClip));
-        foreach(Object o in file){
+        foreach (Object o in file)
+        {
             SoundFiles.Add((AudioClip)o);
         }
         string data = PlayerPrefs.GetString(CONSTANT.nameDataVolume);

@@ -5,9 +5,11 @@ using UnityEngine.UI;
 using System.Linq;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
-using UnityEditor.Events;
 using DG.Tweening;
-using static UnityEditor.Progress;
+#if UNITY_EDITOR
+using UnityEditor;
+using UnityEditor.Events;
+#endif
 
 public class InventoryManager : Singleton<InventoryManager>
 {

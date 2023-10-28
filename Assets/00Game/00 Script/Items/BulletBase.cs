@@ -1,8 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
-using UnityEditor.U2D;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+using UnityEditor.U2D;
+#endif
+
 
 public abstract class BulletBase : MonoBehaviour
 {

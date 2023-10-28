@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class IventorySliderController : Singleton<IventorySliderController> 
 {
@@ -40,6 +42,7 @@ public class IventorySliderController : Singleton<IventorySliderController>
         _selectBorder.transform.localScale = Vector3.one;
         _selectBorder.transform.localPosition = Vector3.zero;
         _selectBorder.transform.SetAsFirstSibling();
+        if (_rectBorder == null) this._rectBorder = _selectBorder.GetComponent<RectTransform>();
         this._rectBorder.sizeDelta = Vector2.zero;
         this._pastSelectObj = index;
         this.addItem(index);

@@ -24,6 +24,7 @@ public class PlayerAnimationController : AnimationControllerBase
     // Start is called before the first frame update
     public override void UpdateAnim(PlayerState playerState)
     {
+        if (_animator == null) return;
         for (int i = 0; i <= (int)PlayerState.Slash; i++)
         {
             if ((int)playerState == i)
@@ -34,6 +35,7 @@ public class PlayerAnimationController : AnimationControllerBase
     }
     public override void UpdateValidateAmin(string name, float value)
     {
+        if (_animator == null) return;
         _animator.SetFloat(name, value);
     }
 

@@ -2942,7 +2942,7 @@ MonoBehaviour:
   _menuBG: {fileID: 21300000, guid: d9062951a05acc34398e0e335662309d, type: 3}
   _BG: {fileID: 1675996694}
   _mainMenu: {fileID: 1968357323}
-  _option: {fileID: 916511347}
+  _option: {fileID: 916511345}
   _loadingBG: {fileID: 21300000, guid: ac262f363f181914988d06224e69d31d, type: 3}
   _loadingScreen: {fileID: 796091312}
   _loadingSlider: {fileID: 664773536}
