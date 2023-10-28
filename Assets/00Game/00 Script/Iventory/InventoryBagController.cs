@@ -4,6 +4,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class InventoryBagController : Singleton<InventoryBagController>
 {
@@ -52,7 +53,7 @@ public class InventoryBagController : Singleton<InventoryBagController>
         ItemDataSO deb = iventory.GetDataItem();
         this._imageDetail.sprite = deb._image;
         this._nameDetail.text = deb._name;
-        this._describeDetail.text = deb._describe;
+        this._describeDetail.text = $"{deb._describe.Replace("\\n", Environment.NewLine)}";
     }
     public void OpenSlider()
     {

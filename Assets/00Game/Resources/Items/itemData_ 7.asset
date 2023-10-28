@@ -17,6 +17,6 @@ MonoBehaviour:
   _image: {fileID: -1213625304, guid: b9d917214ff8edc4eb13bd86d3532fbd, type: 3}
   _weapon: {fileID: 0}
   _medicine: {fileID: 4986190479827036166, guid: 3759dbd77e737e94ab04acd3cf555162, type: 3}
-  _describe: 
+  _describe: 'Dmg: 30'
   _isStack: 1
   _cost: 150

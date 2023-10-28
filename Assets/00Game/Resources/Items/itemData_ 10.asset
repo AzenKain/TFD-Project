@@ -17,6 +17,6 @@ MonoBehaviour:
   _image: {fileID: 570313302, guid: ab0daf55be95038499b744083778b5f2, type: 3}
   _weapon: {fileID: 8131735717292279911, guid: 69ab18e1dfc08d440830424ad5d9eee0, type: 3}
   _medicine: {fileID: 0}
-  _describe: 
+  _describe: Stun:1s\nSpeed:0.5s\nScope:2
   _isStack: 0
   _cost: 1250

@@ -17,6 +17,6 @@ MonoBehaviour:
   _image: {fileID: -1760344410, guid: b9d917214ff8edc4eb13bd86d3532fbd, type: 3}
   _weapon: {fileID: 4129346357467750487, guid: 4bd3c900d735e7543a5a20c6c5bd8071, type: 3}
   _medicine: {fileID: 0}
-  _describe: 
+  _describe: 'Atk: 50\nSpeed: 0.2s'
   _isStack: 0
   _cost: 1250

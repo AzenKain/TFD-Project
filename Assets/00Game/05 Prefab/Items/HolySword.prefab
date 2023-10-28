@@ -549,7 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 50
   _speedAttack: 0
-  _timeUnitDelay: 0.3
+  _timeUnitDelay: 0.2
   _animator: {fileID: 1105301781006437725}
   _spriteRenderer: {fileID: 4140060041040901530}
   _uiWeapon: {fileID: 1197145402596330174}

@@ -17,6 +17,6 @@ MonoBehaviour:
   _image: {fileID: -752093984, guid: b9d917214ff8edc4eb13bd86d3532fbd, type: 3}
   _weapon: {fileID: 0}
   _medicine: {fileID: 8132624399764282384, guid: 8fcdba508c1f86547bc962bdda13f15d, type: 3}
-  _describe: 
+  _describe: 'MaxHp: 200'
   _isStack: 1
   _cost: 150

@@ -17,6 +17,6 @@ MonoBehaviour:
   _image: {fileID: -750275714, guid: b9d917214ff8edc4eb13bd86d3532fbd, type: 3}
   _weapon: {fileID: 0}
   _medicine: {fileID: 3781567593674034417, guid: fe5a09d91d7828f4d98eb52c25fe0a06, type: 3}
-  _describe: 
+  _describe: 'Armor: 40'
   _isStack: 1
   _cost: 100
